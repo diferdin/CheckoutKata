@@ -1,4 +1,4 @@
-package com.diferdin.checkoutKata;
+package com.diferdin.checkoutKata.rules;
 
 import java.util.Collection;
 import java.util.Map;
@@ -9,11 +9,11 @@ import static java.util.stream.Collectors.groupingBy;
 /**
  * Created by antonio on 12/03/2017.
  */
-public class SpecialPriceRuleSet implements PriceRuleSet {
+public class MultiPriceRuleSet implements PriceRuleSet {
 
     private Map<String, SpecialPrice> pricingRules;
 
-    public SpecialPriceRuleSet(Map<String, SpecialPrice> pricingRules) {
+    public MultiPriceRuleSet(Map<String, SpecialPrice> pricingRules) {
 
         this.pricingRules = pricingRules;
 

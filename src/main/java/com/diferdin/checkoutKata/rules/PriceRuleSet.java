@@ -1,4 +1,4 @@
-package com.diferdin.checkoutKata;
+package com.diferdin.checkoutKata.rules;
 
 import java.util.Collection;
 

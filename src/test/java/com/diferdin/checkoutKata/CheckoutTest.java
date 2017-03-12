@@ -1,5 +1,8 @@
 package com.diferdin.checkoutKata;
 
+import com.diferdin.checkoutKata.rules.MultiPriceRuleSet;
+import com.diferdin.checkoutKata.rules.PriceRuleSet;
+import com.diferdin.checkoutKata.rules.SpecialPrice;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -30,7 +33,7 @@ public class CheckoutTest {
         priceRules.put("B", new SpecialPrice(30, 2, 45));
         priceRules.put("C", new SpecialPrice(20));
         priceRules.put("D", new SpecialPrice(15));
-        return new SpecialPriceRuleSet(priceRules);
+        return new MultiPriceRuleSet(priceRules);
     }
 
     @Test

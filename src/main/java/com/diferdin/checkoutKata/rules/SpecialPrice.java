@@ -1,4 +1,4 @@
-package com.diferdin.checkoutKata;
+package com.diferdin.checkoutKata.rules;
 
 /**
  * Created by antonio on 12/03/2017.

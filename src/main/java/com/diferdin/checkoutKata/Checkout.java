@@ -1,5 +1,7 @@
 package com.diferdin.checkoutKata;
 
+import com.diferdin.checkoutKata.rules.PriceRuleSet;
+
 import java.util.LinkedList;
 import java.util.List;
 
