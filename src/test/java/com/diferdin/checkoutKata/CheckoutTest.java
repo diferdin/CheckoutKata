@@ -17,8 +17,7 @@ public class CheckoutTest {
 
     private int calculatePrice(String items) {
 
-        final PriceRuleSet providedRuleSet = getProvidedPriceRuleSet();
-        Checkout checkout = new Checkout(providedRuleSet);
+        Checkout checkout = new Checkout(getProvidedPriceRuleSet());
 
         for(int i = 0; i < items.length(); i++) {
             checkout.scan(String.valueOf(items.charAt(i)));
@@ -65,8 +64,7 @@ public class CheckoutTest {
 
     @Test
     public void shouldCalculateTotalIncrementally() {
-        final PriceRuleSet providedRuleSet = getProvidedPriceRuleSet();
-        Checkout checkout = new Checkout(providedRuleSet);
+        Checkout checkout = new Checkout(getProvidedPriceRuleSet());
 
         checkout.scan("A");
         assertEquals(50, checkout.getTotal());
