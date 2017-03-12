@@ -31,7 +31,7 @@ public class MultiPriceRuleSet implements PriceRuleSet {
 
     private int calculatePriceFor(String name, long quantity) {
         if(!pricingRules.containsKey(name)) {
-            throw new IllegalArgumentException(String.format("No pricing rule found for %s", name));
+            throw new IllegalArgumentException(String.format("No pricing rule found for '%s'", name));
         }
 
         SpecialPrice specialPrice = pricingRules.get(name);
