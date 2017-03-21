@@ -32,6 +32,6 @@ trying to be applied.
 ###Extensibility
 I decided to use one class (SpecialPrice) to model both the standard item price and 
 multi-priced offers; in a real environment this would probably not be a good solution (
-for instance a better one may be to model standard and special prices for the suitable 
+for instance a better one may be to model standard and quantity prices for the suitable 
 offers), however in this specific case I decided that it was not necessary and keeping complexity
 low was more important.

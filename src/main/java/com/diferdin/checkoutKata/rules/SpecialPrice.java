@@ -5,31 +5,24 @@ package com.diferdin.checkoutKata.rules;
  */
 public class SpecialPrice {
 
-    private int unitPrice;
-    private int batchSize;
-    private int batchPrice;
+    private final long price;
+    private final long remainder;
 
-    public SpecialPrice(int unitPrice, int batchSize, int batchPrice) {
-        this.unitPrice = unitPrice;
-        this.batchSize = batchSize;
-        this.batchPrice = batchPrice;
+    public SpecialPrice(final long price, final long remainder) {
+        this.price = price;
+        this.remainder = remainder;
     }
 
-    public SpecialPrice(int unitPrice) {
-        this.unitPrice = unitPrice;
-        this.batchSize = 1;
-        this.batchPrice = unitPrice;
+    public long getPrice() {
+        return price;
     }
 
-    public int getBatchSize() {
-        return batchSize;
+    public long getRemainder() {
+        return remainder;
     }
 
-    public int getUnitPrice() {
-        return unitPrice;
-    }
-
-    public int getBatchPrice() {
-        return batchPrice;
+    @Override
+    public String toString() {
+        return "Special price [price=" + price + "p, remainder=" + remainder + "]";
     }
 }
