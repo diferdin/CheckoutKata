@@ -25,13 +25,14 @@ public class CheckoutTest {
 
 
     private Set<PriceRule> providedPriceRuleSet() {
-        Set<PriceRule> priceRules = new HashSet<>();
+        Set<PriceRule> priceRules = new LinkedHashSet<>();
+        priceRules.add(multiPriceRuleFor(A).buy(3).forPrice(130));
+        priceRules.add(multiPriceRuleFor(B).buy(2).forPrice(45));
         priceRules.add(singlePriceRuleFor(A).atPrice(50));
         priceRules.add(singlePriceRuleFor(B).atPrice(30));
         priceRules.add(singlePriceRuleFor(C).atPrice(20));
         priceRules.add(singlePriceRuleFor(D).atPrice(15));
-        priceRules.add(multiPriceRuleFor(A).buy(3).forPrice(130));
-        priceRules.add(multiPriceRuleFor(B).buy(2).forPrice(45));
+
         return priceRules;
     }
 

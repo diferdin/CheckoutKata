@@ -74,4 +74,9 @@ public final class SinglePriceRule implements PriceRule {
         }
         return price == obj.price;
     }
+
+    @Override
+    public String toString() {
+        return "item " + item + " for " + price;
+    }
 }
