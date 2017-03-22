@@ -12,9 +12,9 @@ import java.util.Set;
 /**
  * Created by antonio on 12/03/2017.
  */
-class Checkout {
+public class Checkout {
 
-    class Transaction {
+     class Transaction {
 
         private final Set<PriceRule> priceRuleSet;
         private Map<Item, Long> shoppingBasket = new HashMap<>();

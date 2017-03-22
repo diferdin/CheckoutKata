@@ -47,9 +47,9 @@ public final class MultiPriceRule implements PriceRule {
     }
 
     public SpecialPrice apply(final long amount) {
-        final long applies = amount / quantity;
-        final long totalPrice = price * applies;
-        return new SpecialPrice(totalPrice, applies * quantity);
+        final long units = amount / quantity;
+        final long totalPrice = price * units;
+        return new SpecialPrice(totalPrice, units * quantity);
     }
 
     @Override
